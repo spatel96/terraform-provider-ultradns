@@ -2,6 +2,7 @@ package ultradns
 
 import (
 	"fmt"
+	"os"
 	"testing"
 
 	"github.com/Ensighten/udnssdk"
@@ -10,7 +11,7 @@ import (
 
 func TestAccUltradnsProbeHTTP(t *testing.T) {
 	var record udnssdk.RRSet
-	domain := "ultradns.phinze.com"
+	domain := os.Getenv("ULTRADNS_DOMAIN")
 
 	resource.Test(t, resource.TestCase{
 		PreCheck:     func() { testAccPreCheck(t) },

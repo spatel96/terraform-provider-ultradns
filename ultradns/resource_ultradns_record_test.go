@@ -2,6 +2,7 @@ package ultradns
 
 import (
 	"fmt"
+	"os"
 	"testing"
 
 	"github.com/Ensighten/udnssdk"
@@ -11,8 +12,7 @@ import (
 
 func TestAccUltradnsRecord(t *testing.T) {
 	var record udnssdk.RRSet
-	// domain := os.Getenv("ULTRADNS_DOMAIN")
-	domain := "ultradns.phinze.com"
+	domain := os.Getenv("ULTRADNS_DOMAIN")
 
 	resource.Test(t, resource.TestCase{
 		PreCheck:     func() { testAccPreCheck(t) },
@@ -52,8 +52,7 @@ func TestAccUltradnsRecord(t *testing.T) {
 
 func TestAccUltradnsRecordTXT(t *testing.T) {
 	var record udnssdk.RRSet
-	// domain := os.Getenv("ULTRADNS_DOMAIN")
-	domain := "ultradns.phinze.com"
+	domain := os.Getenv("ULTRADNS_DOMAIN")
 
 	resource.Test(t, resource.TestCase{
 		PreCheck:     func() { testAccPreCheck(t) },
