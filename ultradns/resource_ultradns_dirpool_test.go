@@ -157,20 +157,6 @@ resource "ultradns_dirpool" "it" {
     }
   }
 
-#   rdata {
-#     host = "10.1.1.4"
-#
-#     geo_info {
-#       name             = "accountGeoGroup"
-#       is_account_level = true
-#     }
-#
-#     ip_info {
-#       name             = "accountIPGroup"
-#       is_account_level = true
-#     }
-#   }
-
   no_response {
     geo_info {
       name = "nrGeo"

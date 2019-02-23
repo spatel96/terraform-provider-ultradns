@@ -29,15 +29,15 @@ func TestProvider_impl(t *testing.T) {
 }
 
 func testAccPreCheck(t *testing.T) {
-	if v := os.Getenv("ULTRADNS_USERNAME"); v == "" {
+	if os.Getenv("ULTRADNS_USERNAME") == "" {
 		t.Fatal("ULTRADNS_USERNAME must be set for acceptance tests")
 	}
 
-	if v := os.Getenv("ULTRADNS_PASSWORD"); v == "" {
+	if os.Getenv("ULTRADNS_PASSWORD") == "" {
 		t.Fatal("ULTRADNS_PASSWORD must be set for acceptance tests")
 	}
 
-	if v := os.Getenv("ULTRADNS_DOMAIN"); v == "" {
+	if os.Getenv("ULTRADNS_DOMAIN") == "" {
 		t.Fatal("ULTRADNS_DOMAIN must be set for acceptance tests. The domain is used to create and destroy record against.")
 	}
 }
