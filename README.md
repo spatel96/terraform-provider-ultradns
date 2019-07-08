@@ -30,6 +30,19 @@ $ cd $GOPATH/src/github.com/terraform-providers/terraform-provider-ultradns
 $ make build
 ```
 
+Workaround until official Terraform 0.12 Support is available
+-------------------------------------------------------------
+
+Build the plugin locally and copy into `~/.terraform.d/plugins/.`
+
+```sh
+$ make build
+$ mkdir -p ~/terraform.d/plugins
+$ cp ~/go/bin/terraform-provider-ultradns ~/.terraform.d/plugins/.
+
+```
+
+
 Using the provider
 ----------------------
 ## Fill in for each provider
