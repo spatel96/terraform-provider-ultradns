@@ -37,7 +37,7 @@ Build the plugin locally and copy into `~/.terraform.d/plugins/.`
 
 ```sh
 $ make build
-$ mkdir -p ~/terraform.d/plugins
+$ mkdir -p ~/.terraform.d/plugins
 $ cp ~/go/bin/terraform-provider-ultradns ~/.terraform.d/plugins/.
 
 ```
