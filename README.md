@@ -41,7 +41,7 @@ $ mkdir -p ~/.terraform.d/plugins
 $ cp ~/go/bin/terraform-provider-ultradns ~/.terraform.d/plugins/.
 
 ```
-
+*Note:* Make sure that delete old versions of the plugin in the .terraform folders of you project
 
 Using the provider
 ----------------------
