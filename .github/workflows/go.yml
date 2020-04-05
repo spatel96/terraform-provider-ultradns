@@ -24,6 +24,7 @@ jobs:
 
     - name: Get dependencies
       run: |
+        go mod init github.com
         go mod tidy
         go mod vendor
         if [ -f Gopkg.toml ]; then
