@@ -33,9 +33,11 @@ jobs:
     - shell: bash
       run: ls -latr
     - shell: bash
+      run: ls /home/runner/work/ -latr
+    - shell: bash
       run: pwd
     - name: Upload
       uses: actions/upload-artifact@v1
       with:
         name: terraform-provider-ultradns
-        path: $GOPATH/bin/terraform-provider-ultradns
+        path: /home/runner/work/bin/terraform-provider-ultradns
