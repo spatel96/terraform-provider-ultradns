@@ -30,3 +30,8 @@ jobs:
 
     - name: Build
       run: make build
+    
+    - uses: actions/upload-artifact@v1
+      with:
+        name: terraform-provider-ultradns
+        path: ~/go/bin/terraform-provider-ultradns
