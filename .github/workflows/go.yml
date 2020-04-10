@@ -30,8 +30,12 @@ jobs:
 
     - name: Build
       run: make build
-    
-    - uses: actions/upload-artifact@v1
+    - shell: bash
+      run: ls -latr
+    - shell: bash
+      run: pwd
+    - name: Upload
+      uses: actions/upload-artifact@v1
       with:
         name: terraform-provider-ultradns
         path: $GOPATH/bin/terraform-provider-ultradns
