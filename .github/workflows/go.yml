@@ -1,7 +1,7 @@
 name: Go
 
 env:
-  GOBIN: /usr/local/bin/
+  GOBIN: /home/runner/work/terraform-provider-ultradns/terraform-provider-ultradns/bin/
 
 
 on:
@@ -37,4 +37,4 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: terraform-provider-ultradns
-        path: /usr/local/bin/terraform-provider-ultradns
+        path: /home/runner/work/terraform-provider-ultradns/terraform-provider-ultradns/bin/terraform-provider-ultradns
