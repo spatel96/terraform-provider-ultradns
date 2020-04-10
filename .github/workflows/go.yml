@@ -1,5 +1,9 @@
 name: Go
 
+env:
+  GOBIN: /usr/local/bin/
+
+
 on:
   push:
   pull_request:
@@ -27,17 +31,10 @@ jobs:
             curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
             dep ensure
         fi
-
     - name: Build
       run: make build
-    - shell: bash
-      run: ls -latr
-    - shell: bash
-      run: ls /home/runner/work/ -latr
-    - shell: bash
-      run: pwd
     - name: Upload
       uses: actions/upload-artifact@v1
       with:
         name: terraform-provider-ultradns
-        path: /home/runner/work/bin/terraform-provider-ultradns
+        path: /usr/local/bin/terraform-provider-ultradns
