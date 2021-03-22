@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/Ensighten/udnssdk"
+	"github.com/ultradns/ultradns-sdk-go"
 )
 
 // Config collects the connection service-endpoint and credentials
